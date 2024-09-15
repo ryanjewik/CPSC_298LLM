@@ -6,4 +6,4 @@
 - Experienced with managing repositories and forks. 
 
 ## Screenshot
-![Alt text](../../Desktop/v0.jpg)
+![Alt text](../../Desktop/v0.png)
