@@ -1,9 +1,8 @@
 # V0 Website Generation
 
 ## Learning Experience
-- Learned how to generate a website using v0.
+- Learned how to generate frontend with V0
 - Learned about the process of making pull requests in GitHub. 
-- Experienced with managing repositories and forks. 
 
 ## Screenshot
-![Alt text](../../Desktop/v0.png)
+<img width="1512" alt="v0" src="https://github.com/user-attachments/assets/20040b18-fff9-4176-8176-da746da42477">
