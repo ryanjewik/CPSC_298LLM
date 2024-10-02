@@ -1,67 +1,76 @@
-# Lecture 5 - Feb. 28, 2024
+# Lecture 5
 
 ## Housekeeping
-- You will receive a DM if you have not taken quiz, completed assignments, or setup CI channel notifications...
-- * [How to hook in Discord](https://gist.github.com/SGTGunner/50d6a3cc0d489cf779f77695ba3e22ea)
-- Abandoning use of Azure AI for now; have not found commercial sponsor (yet)
-- Plan on setting up local LLMs w/Aider week after next 
-- Class lecture videos now avaialable on permalink (see Canvas)
-- Should be able to install [Warp under WSL](https://github.com/warpdotdev/Warp/issues/4240#issuecomment-1960429829)
-- New quiz out tomorrow; Due Monday at midnight
-- Where everyone should be:
-- * Core repo cloned and forked; ssh keys setup
-- * Added GitHub user jeffrey-l-turner as a collaborator to your forked repo
-- * Discord CI channel notifications for push pull
-- * Pull Request for homework submitted to YOUR fork, not mine...
-- * If on Windows, WSL installed and used
-- * Should be able to:
-```
-git pull upstream
-git push origin # on your cloned repo to your fork
-# see push and PR notifications in Discord
-# Able to add me as reviewer for PRs on GitHub
-```
+- Week in World of AI
+    * Open AI Strawberry (o1) as STaR confirmations
+    * [Claude Dev (extension to VS Code)](https://github.com/saoudrizwan/claude-dev)
+    * [Updated Coding Benchmarks: Open AI, Anthropic, Google](https://www.youtube.com/watch?v=cESc7v1G1uA) & [Leaderboard](https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard)
+    * [New Microsoft Models](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcs8uhnA2CPUQP9EpzFBvjCNOmTg62aYu8PKxQVL8Z3Gf4Rv5LaOdHGBXEIupZXdYu9-eIhgW5mBC5j4ZUYp14zxBBX61VObQpC1x7_cyG_5PBbSZuYThwRolLJBWWwZlAB_MD8-7iTDS4OpXCEvgOI3zdV?key=EeRJUTRsFriuBsQRcjhLjw)
+    * Meta Conference This week + open source developments
+- Homework and Quizzes Assesment; Docking 10% minimum for missed deadlines; Due dates will now on late Wednesday (after class) & Docked Thursday
+- Walk through Github Pull Request
+- A word on System and Language Ecosystem Package Management (`npm`, `brew`, `choco install`, `pip`, `uv`, etc.)
+- Re-orienting class: TypeScript + Python language ecosystems
+- Get Groq key: [https://console.groq.com/keys](https://console.groq.com/keys)
 
-## Class Notes - Transfomers in Depth
-- Expertise (including Language) 
-- Tokenization (last week)
-- Embedding
-- Positional Encoding
-- Feedfoward Networks
-- Attention
-- Context Window
+## Where Everyone Should Be:
+- Discord Notifications with Webhook (DM me if you need the hook)
+- Upstream forked and Setup on Personal Github accounts; Know Git/hub:
+    * `ssh-keygen` & `ssh-add {-l}`
+    * `git pull`
+    * `git push`
+    * `git checkout {-b} <branch>`
+    * `git set upstream <branch>`
+    * `ssh -vT git@github.com # check ssh key setup`
+- Pull Requests on Github, forks, and origin/upstreams.
+- Basics of AI coding with V0 and setting up code on local repo
+- Knowledge of TypeScript ecosystem with `npx`, `npm`, and NodeJS (ask AI if uncertain)
+- AI Tooling: V0, Replit, Chat.dev, Copilot, Cursor, & Concepts:
+    * Large Language Models (LLMs)
+    * Feed forward networks (& ANNs)
+    * Context Windows
+    * Retrieval Augmented Generation (RAG)
+    * Chain & Tree of Thought (CoT/ToT)
+    * Self Taught Reasoning (STaR)
+    * Tokenization and Transformer Architectures as well as Next Token Prediction
+    * Mixture of Experts (MoE)
+    * Agentic Approaches
+    * Benchmarking, Weigths/Biases (Parameters) & Open Source Relevance (open weights, data, and models)
+- Mindset: Operating at Higher Levels of Abstraction
 
-### Evolution
+- Assignment 1 Pull Request on Github account with changes in assignment directory
+    * ` npx shadcn@latest add "https://v0.dev/chat/...`
+
+## Artificial Neural Networks:
+- MoE & Encoding Re-Review
 <div align="center">
-  <img src="../docs/drawings/LLM_Evolutionary_tree.jpg" width="400" height="365" />
+  <img src="./MoE.png" width="600" height="365" />
+</div>
+<div align="center">
+  <img src="./Encoder_router_MoE.png" width="600" height="365" />
 </div>
 
-### Building Blocks
-<div align="center">
-  <img src="../docs/drawings/Building_blocks_llm_transformer.jpg" width="400" height="365"/>
-</div>
-
-## From previous class
-Note Diagram. From [Andrej Karpathy](https://karpathy.ai/) [see](https://www.youtube.com/watch?v=zduSFxRajkE):
-```
-• Mhy cant LUM spell well? 
-• Why cant LLM do super string processing like inverting a string?
-• Why are LLMs bad at simple arithmetic? 
-• Why dd GPT-2 have more trouble with coding in Python 2? 
-• Why did my LLM abruptly halt when it sees "<endoftext>"? 
-• What is this weird warnirg about "trailing whitespace"? 
-• Why woul I prefer to use YAML over JSON win LLMs? T
-• What is the root of my LLM suffering? 
-```
-
-- [Dr. Vivek Haldar's Presentation](https://docs.google.com/presentation/d/1MJDj0ClOdkJ82_uIqpciVHd_aTz8uPA_9HvAAm3bYqs/edit#slide=id.g251cd9882c6_0_42)
+## Homework
+- Currently free / See above to get Groq key; [Open AI Compatibility](https://groq.com/groqcloud/)
+- Fifth Week Assignment (#3)
+    * `git pull upstream master; git push # on your forked master branch`
+    * Make jeffrey-l-turner a collaborator on your fork & wait for acceptance; Place jeffrey-l-turner as reviewer on pull request
+    * Copy and modify `assignments/sample.aider.conf.yml` to existing `assignments/`directory; Place Groq API key and model in this file so that Aider works properly
+    * use Aider and/or LLM with your assignment to enhance code with UI; Make sure all code is committed from V0 in `assignments/` directory
+    * Now using [`uv`](https://github.com/astral-sh/uv) to install aider and other Python tooling ([Windows:Chocalatey](https://chocolatey.org/install); Mac: [brew](https://brew.sh/) ; Linux: use `curl`)
+- Make sure to enhance .md file with your screenshot and any notes
+- Sign up for OpenRouter; Install aider with uv (`uv venv; uv pip install aider-chat`); Install [`llm`](https://github.com/simonw/llm) (e.g. `uv pip install llm` or `brew install llm`)
+- Again, make sure jeffrey-l-turner is set to reviewer and changes have been committed into PR
 
 ## References:
-- [Andrej Karpathy part II](https://youtu.be/zduSFxRajkE?si=2lUFNJM1ke96fTQd)
-- [Transformers, Tokenization, and Embedding](https://vaclavkosar.com/ml/transformer-embeddings-and-tokenization)
-- [Type Theory and LLM](https://medium.com/@andrew_johnson_4/harnessing-the-power-of-type-theory-in-large-language-models-351691ca2644) {behind pay wall}
-- [Embeddings and LLMs](https://datasciencedojo.com/blog/embeddings-and-llm/)
-- [Transformers to Prompts](https://www.holisticai.com/blog/from-transformer-architecture-to-prompt-engineering)
-- [Transfomers Visually Part I](https://towardsdatascience.com/transformers-explained-visually-part-1-overview-of-functionality-95a6dd460452)
-- [Transfomers Visually Part II](https://towardsdatascience.com/transformers-explained-visually-part-2-how-it-works-step-by-step-b49fa4a64f34)
-- [Transformers Visually Part III](https://towardsdatascience.com/transformers-explained-visually-part-3-multi-head-attention-deep-dive-1c1ff1024853)
+- [Evidence of Strawberry (o1) being STaR]()
+- [Using "close to the metal" AI coding synthesis (Aider + Cursor + Bun)](https://youtu.be/QlUt06XLbJE?si=NnwOeyl4BVPo8JRW)
+- [Contextual RAG](https://youtu.be/42Da0O9zkhc?si=CyhxuoI44UwpNFoA)
+- [Open AI Hates Transparency](https://youtu.be/gC9VW23fk9g?si=nXIe97yhVWD6uc7z)
+- [The Intelligence Age](https://youtu.be/evDI1a6E8JY?si=pvjuI5rJmnRfJUBj)
+- [ClaudDev](https://youtu.be/Xp8M9kmnV34?si=oW3iHIoibwZ9Hq-S)
+- [Nuclear Power and new Microsoft AI Models](https://www.youtube.com/watch?v=T301T6H9l34)
+
+## Resources:
+- Channels I Follow for this Class: [Wes Roth](https://www.youtube.com/@WesRoth), [Matthew Berman](https://www.youtube.com/@matthew_berman), [David Shapiro](https://www.youtube.com/@DaveShap/videos), [Indy Dev Dan](https://www.youtube.com/@indydevdan), [Greg Isenberg](https://www.youtube.com/@GregIsenberg), [3 Blue 1 Brown](https://www.youtube.com/@3blue1brown), [AI Explained](https://www.youtube.com/@3blue1brown)
+- Tools: [Aider](https://aider.chat/), [LLM](https://github.com/simonw/llm), & [uv](https://github.com/astral-sh/uv)

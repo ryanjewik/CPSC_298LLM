@@ -1,56 +1,79 @@
-# Lecture 4 - Feb. 21, 2024
+# Lecture 4
 
 ## Housekeeping
-- Revisit Pull Requests and Assignment (& my Time Commitment -- will start using CI channel in Discord for notifications)
-- [Revisit How to hook in Discord](https://gist.github.com/SGTGunner/50d6a3cc0d489cf779f77695ba3e22ea)
-- AzureAI - Unable to assign API keys currently
-- GitHub collaborators; Only about half class has added me as collaborator
-- Setting up Aider to be delayed until next week (or new commercial sponsor). Still need to find correct IS&T group
-- Will be setting up local LLM training w/Aider 
-- Class lecture videos will now be posted on permalink
-- Quiz is available; Due Monday at midnight
-- Where everyone should be:
-- * Core repo cloned and forked; ssh keys setup
-- * Added GitHub user jeffrey-l-turner as a collaborator to your forked repo
-- * Discord CI channel notifications for push pull
-- * Pull Request for homework submitted to YOUR fork, not mine...
-- * If on Windows, WSL installed and used
-- * Should be able to:
-```
-git pull upstream
-git push origin # on your cloned repo to your fork
+- Week in World of AI
+    * Open AI Strawberry (o1)
+    * [Google Notebook LM](https://notebooklm.google/)
+    * [Updated Coding Benchmarks: Open AI, Anthropic, Google](https://www.youtube.com/watch?v=cESc7v1G1uA)
+- Homework and Quizzes Assesment
+- Cloud Recordings now with AI
+- Reminder: Make sure you DM BOTH mobile & desktop Discord Accounts (add me as friend to do so)
+- Tools for Next Lecture: LLM & Aider (see: Resources)
 
-```
-- [Open AI acting up](https://www.independent.co.uk/tech/chatgpt-status-reddit-down-gibberish-messages-latest-b2499816.html) -- Speculation on "Temperature"
-```
-When one user requested help with a coding issue, the chatbot wrote back a rambling, largely nonsensical answer stating “Let’s keep the line as if AI in the room.” 
-```
-- Notes from Dr. Vivek Haldar's talk Monday:
-- * RAGs and Context Windows
-- * Research Papers on Subject
-- * Practical elements for students and in industry
+## Review how to use Github
+- Git
+    * SSH Keys
+    * local Forks
+    * Creating branches (prefer `git checkout -b <branch>`)
+    * Setting up Pull Requests
+- Setting Upstream and origin:
+    * `git remote add upstream git@github.com:jeffrey-l-turner/CPSC_298.git`
+    * `git remote add origin <your ssh repo address git@github.com:ghuser/CPSC_298.git` # if you're upstream was not set properly do `git rm origin` before this
+    * `git pull master upstream`
+    * `git push # to push changes to your fork`
+- Survey of Development Environments (Aider, Cursor, V0...)
 
-## Class Notes - LLMs, Tokenizers, Mixture of Experts, and Code Assistance
+## Coding Assistance Tools; Reproducibility & Canonical Use
+- What is Open Source
+    * Licenses
+    * LLMs: Weights, Model, & Data
+- Higher Level Abstraction vs. Close to "metal" command line use
+- Tooling: Aider vs. Github Copilot vs. Cursor vs. V0 + (Tabnine, JetBrains...)
+- Determinism and Higher Level Abstractions
 
-Will be experimenting with: [tiktokenizer](https://tiktokenizer.vercel.app/) 
+## Current AI & LLM Technology for Coding Synthesis
+- Benchmarking
+- Self Taught Reasoners (STaR)
+- Chain/Tree of Thought Reasoning
+- Feed Forward Networks & Autoregression with Loss Minimization
+- Tokenization
+- Next Token Prediction
+- Transformers & Attention
+- Context Windows
+- Retrieval Augmented Generation (RAG)
+- Mixture of Experts (MoE) and non-Composition
+- Agents
+- Need for Composition
 
-Note Diagram. From [Andrej Karpathy](https://karpathy.ai/) [see](https://www.youtube.com/watch?v=zduSFxRajkE):
-```
-• Mhy cant LUM spell well? 
-• Why cant LLM do super string processing like inverting a string?
-• Why are LLMs bad at simple arithmetic? 
-• Why dd GPT-2 have more trouble with coding in Python 2? 
-• Why did my LLM abruptly halt when it sees "<endoftext>"? 
-• What is this weird warnirg about "trailing whitespace"? 
-• Why woul I prefer to use YAML over JSON win LLMs? T
-• What is the root of my LLM suffering? 
-```
+## Artificial Neural Networks:
+- Legacy Software Tool Chains
+<div align="center">
+  <img src="./Attention_is_all_you_need_feed_ANN.png" width="600" height="365" />
+</div>
+<div align="center">
+  <img src="./MoE.png" width="600" height="365" />
+</div>
+<div align="center">
+  <img src="./Encoder_router_MoE.png" width="600" height="365" />
+</div>
 
-## Assignment
-- Use [tiktokenizer](https://tiktokenizer.vercel.app/) to with code and place results in (new branch &) pull request (PR). In your own words, describe with the tokenized description how LLMs, tokenizers, mixture of experts, and Coding Assistance fits together. I will be looking for a description in the PR.
-- Bonus credit: ask your favorite coding assistant AI to write 3 modules: tokenizer, MoE, and simple neural network to assist with coding. [See Andrej Karpathy's YouTube channel](https://www.youtube.com/watch?v=zduSFxRajkE). Put in a separate PR with different branch.
+## Quiz
+- Concepts from first four lectures 
+
+## Previous Homework
+- Everyone should have SSH keys setup along with forks
+- Everyone should have placed notes on learning experience and screenshot of app in the `.md` file
+- Everyone should have made a Pull Request to only your OWN repo fork - not class one.
+- Everyone should have Discord Webhook
 
 ## References:
-- [Transformers, Tokenization, and Embedding](https://vaclavkosar.com/ml/transformer-embeddings-and-tokenization)
-- [Type Theory and LLM](https://medium.com/@andrew_johnson_4/harnessing-the-power-of-type-theory-in-large-language-models-351691ca2644) {behind pay wall}
-- [Embeddings and LLMs](https://datasciencedojo.com/blog/embeddings-and-llm/)
+- [Chat GPT o1 Changes Everything](https://youtu.be/GUVrOa4V8iE?si=nuJ7nOqWuSNwlZDH)
+- [Google's LM Notebook](https://youtu.be/b7GJ45oKQww?si=FCK2LSEEEEXOKNkK)
+- [Open AI o2](https://youtu.be/K_3ww-kICiM?si=OgEtXyrEjNzhmy9n)
+- [Re-review Coding an App in 1.5 hours](https://youtu.be/kDcM_xwmP3Q)
+- [Cursor great but Aider is OG](https://youtu.be/ag-KxYS8Vuw?si=EVnlS-fwelkbx3JG)
+- [Partially share this Philosophy](https://youtu.be/u3wPImWBz7c?si=GzUICDwL7lmCVXVj)
+- [Correct(ness) by Construction (CbC)](https://youtu.be/rHY7nboIyBg?si=A_lapKTLNOksZgDE)
+- [GPT 01 Looks like it is using STaR](https://youtu.be/KKF7kL0pGc4?si=h-kwL4xLqFRNFxLZ)
+- Channels I Follow for this Class: [Wes Roth](https://www.youtube.com/@WesRoth), [Matthew Berman](https://www.youtube.com/@matthew_berman), [David Shapiro](https://www.youtube.com/@DaveShap/videos), [Indy Dev Dan](https://www.youtube.com/@indydevdan), [Greg Isenberg](https://www.youtube.com/@GregIsenberg), [3 Blue 1 Brown](https://www.youtube.com/@3blue1brown), [AI Explained](https://www.youtube.com/@3blue1brown)
+- Tools: [Aider](https://aider.chat/) & [LLM](https://github.com/simonw/llm)
