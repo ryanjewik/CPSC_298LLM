@@ -13,6 +13,7 @@
 - Canvas Updated once I review your PR (make sure I'm contributor/reviewer)
 - Poll on Groq Key usage; Will assign keys next week.
 - Check Spreadsheet & DM if incorrect/incomplete (posted in Discord); If not on sheet I will not get your homework submissions!
+- Swenson #N305 now for office hours
 
 ## Where Everyone Should Be Revisited:
 - Discord Notifications with Webhook (DM me if you need the hook; Look in Discord help channel for Webhooks)
@@ -76,7 +77,7 @@ See definitions:
 - LLM and Prompts as Programs
 
 ## References:
-- [Prompts as Programs]()
+- [Prompts as Programs](https://youtu.be/IQI5BZlVI3Y?si=FuNUtqfFVVV_BZ6y)
 
 ## Resources:
 - Channels I Follow for this Class: [Wes Roth](https://www.youtube.com/@WesRoth), [Matthew Berman](https://www.youtube.com/@matthew_berman), [David Shapiro](https://www.youtube.com/@DaveShap/videos), [Indy Dev Dan](https://www.youtube.com/@indydevdan), [Greg Isenberg](https://www.youtube.com/@GregIsenberg), [3 Blue 1 Brown](https://www.youtube.com/@3blue1brown), [AI Explained](https://www.youtube.com/@3blue1brown)
