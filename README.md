@@ -18,3 +18,5 @@
 [Lecture 7](./lectures/lecture07.md)
 
 [Lecture 8](./lectures/lecture08.md)
+
+[Lecture 9](./lectures/lecture09.md)
